@@ -7,7 +7,6 @@ class Sizes {
   // static final double _height = mediaQuery.size.height;
   // static final double _topbarH = mediaQuery.padding.top;
   // static final double _botbarH = mediaQuery.padding.bottom;
-  static final double _pixelRatio = mediaQuery.devicePixelRatio;
   static double unit = _width / 750.0;
 
 
