@@ -1,17 +1,17 @@
 import 'package:flutter/material.dart';
 import 'package:tuling_music_app/theme.dart';
 import 'package:tuling_music_app/utils/sizes.dart';
-import 'package:tuling_music_app/widget/sign_in.dart';
-import 'package:tuling_music_app/widget/sign_up.dart';
+import 'package:tuling_music_app/pages/login/sign_in.dart';
+import 'package:tuling_music_app/pages/login/sign_up.dart';
 
-class Login extends StatefulWidget {
-  const Login({Key? key}) : super(key: key);
+class LoginPage extends StatefulWidget {
+  const LoginPage({Key? key}) : super(key: key);
 
   @override
-  State<Login> createState() => _LoginState();
+  State<LoginPage> createState() => _LoginPageState();
 }
 
-class _LoginState extends State<Login> with TickerProviderStateMixin {
+class _LoginPageState extends State<LoginPage> with TickerProviderStateMixin {
 
   late TabController _tabController;
 
