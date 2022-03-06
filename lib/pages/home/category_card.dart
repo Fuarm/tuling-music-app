@@ -29,7 +29,8 @@ class CategoryCard extends StatelessWidget {
             bottomRight: Radius.circular(Sizes.size18),
         )
       ),
-      clipBehavior: Clip.hardEdge, child: GestureDetector(
+      clipBehavior: Clip.hardEdge,
+      child: GestureDetector(
         onTap: onPress,
         child: Stack(
           children: [

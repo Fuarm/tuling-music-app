@@ -9,7 +9,7 @@ class Sizes {
   // static final double _botbarH = mediaQuery.padding.bottom;
   static double unit = _width / 750.0;
 
-
+  static final double size10 = 10 * unit;
   static final double size12 = 12 * unit;
   static final double size14 = 14 * unit;
   static final double size16 = 16 * unit;
