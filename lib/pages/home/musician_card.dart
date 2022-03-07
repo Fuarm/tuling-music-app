@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:tuling_music_app/theme.dart';
 import 'package:tuling_music_app/utils/sizes.dart';
 
 class MusicianCard extends StatelessWidget {
@@ -38,20 +39,14 @@ class MusicianCard extends StatelessWidget {
               softWrap: true,
               overflow: TextOverflow.ellipsis,
               maxLines: 2,
-              style: TextStyle(
-                fontSize: Sizes.size32,
-                color: Colors.black87,
-              ),
+              style: primaryText,
             ),
             SizedBox(height: Sizes.size10),
             Text(category,
               textAlign: TextAlign.center,
               softWrap: true,
               overflow: TextOverflow.ellipsis,
-              style: TextStyle(
-                fontSize: Sizes.size24,
-                color: Colors.black45
-              ),
+              style: secondaryText,
             ),
           ],
         ),

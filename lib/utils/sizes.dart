@@ -4,9 +4,6 @@ import 'package:flutter/material.dart';
 class Sizes {
   static MediaQueryData mediaQuery = MediaQueryData.fromWindow(window);
   static final double _width = mediaQuery.size.width;
-  // static final double _height = mediaQuery.size.height;
-  // static final double _topbarH = mediaQuery.padding.top;
-  // static final double _botbarH = mediaQuery.padding.bottom;
   static double unit = _width / 750.0;
 
   static final double size10 = 10 * unit;

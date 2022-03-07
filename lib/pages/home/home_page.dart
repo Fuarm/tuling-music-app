@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:tuling_music_app/pages/home/header.dart';
 import 'package:tuling_music_app/pages/home/musician_card.dart';
 import 'package:tuling_music_app/pages/home/plate_title.dart';
+import 'package:tuling_music_app/widget/music_list.dart';
 import 'package:tuling_music_app/widget/scrollable_section.dart';
 import 'package:tuling_music_app/widget/square_card.dart';
 
@@ -30,7 +31,7 @@ class _HomePageState extends State<HomePage> {
                   onPress: () {},
                 ),
                 MusicianCard(
-                  name: '李知恩(IU)',
+                  name: '李知恩（IU）',
                   avatar: 'https://img2.baidu.com/it/u=843289328,75113668&fm=253&fmt=auto&app=138&f=JPEG?w=889&h=500',
                   category: '流行音乐',
                   onPress: () {},
@@ -112,6 +113,8 @@ class _HomePageState extends State<HomePage> {
                 )
               ],
             ),
+            PlateTitle(title: "最近播放", onPress: () {}),
+            const MusicList(),
 
             const SafeArea(top: false, child: SizedBox(height: 0)),
           ],
