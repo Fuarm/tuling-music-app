@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:tuling_music_app/utils/sizes.dart';
 
 const int _primaryColor = 0xFF00BDDC;
 
@@ -29,4 +30,14 @@ const LinearGradient linearGradient = LinearGradient(
     primaryColors,
     Color(0xFF4DD2E8),
   ],
+);
+
+TextStyle primaryText = TextStyle(
+  fontSize: Sizes.size32,
+  color: Colors.black87,
+);
+
+TextStyle secondaryText = TextStyle(
+  fontSize: Sizes.size24,
+  color: Colors.black45
 );
