@@ -16,22 +16,17 @@ class MusicianCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    var size = Sizes.size24 * 10;
+    final radius = Sizes.size24 * 5;
     return Container(
-      width: size,
+      width: radius * 2,
       margin: EdgeInsets.only(right: Sizes.size20 * 2),
       child: GestureDetector(
         onTap: onPress,
         child: Column(
           children: [
-            Container(
-                width: size,
-                height: size,
-                decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(size / 2)
-                ),
-                clipBehavior: Clip.hardEdge,
-                child: Image.network(avatar, width: size, height: size, fit: BoxFit.cover)
+            CircleAvatar(
+              radius: radius,
+              backgroundImage: NetworkImage(avatar),
             ),
             SizedBox(height: Sizes.size20),
             Text(name,
