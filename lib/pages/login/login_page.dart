@@ -1,3 +1,5 @@
+import 'dart:ui';
+
 import 'package:flutter/material.dart';
 import 'package:tuling_music_app/theme.dart';
 import 'package:tuling_music_app/utils/sizes.dart';
@@ -14,6 +16,8 @@ class LoginPage extends StatefulWidget {
 class _LoginPageState extends State<LoginPage> with TickerProviderStateMixin {
 
   late TabController _tabController;
+  final double _stateBarHeight = MediaQueryData.fromWindow(window).padding.top;
+  final double _height = MediaQueryData.fromWindow(window).size.height;
 
   @override
   void initState() {
@@ -24,53 +28,47 @@ class _LoginPageState extends State<LoginPage> with TickerProviderStateMixin {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: SingleChildScrollView(
-        child: Container(
-          color: primaryColors,
-          width: MediaQuery.of(context).size.width,
-          height: MediaQuery.of(context).size.height,
-          child: SafeArea(
-            bottom: false,
-            child: Column(
-              children: [
-                SizedBox(height: Sizes.size54 * 4),
-                Flexible(
-                  child: Container(
-                    decoration: const BoxDecoration(
-                      color: Colors.white,
-                      borderRadius: BorderRadius.only(
-                        topLeft: Radius.circular(15),
-                        topRight: Radius.circular(15)
-                      )
-                    ),
-                    child: SafeArea(
-                      top: false,
-                      child: Column(
-                        children: [
-                          TabBar(
-                            controller: _tabController,
-                            tabs: const [
-                              Tab(text: "登录"),
-                              Tab(text: "注册"),
-                            ]
-                          ),
-                          Flexible(
-                            child: TabBarView(
-                              controller: _tabController,
-                              children: const [
-                                SignIn(),
-                                SignUp(),
-                              ],
-                            ),
-                          ),
-                        ],
+      body: Container(
+        width: MediaQuery.of(context).size.width,
+        color: primaryColors,
+        child: Column(
+          children: [
+            SizedBox(height: Sizes.size48 * 4 + _stateBarHeight),
+            Expanded(
+              child: Container(
+                  decoration: const BoxDecoration(
+                    color: Colors.white,
+                    borderRadius: BorderRadius.only(
+                      topLeft: Radius.circular(15),
+                      topRight: Radius.circular(15)
+                    )
+                  ),
+                  child: Column(
+                    children: [
+                      TabBar(
+                        controller: _tabController,
+                        tabs: const [
+                          Tab(text: "登录"),
+                          Tab(text: "注册"),
+                        ]
                       ),
-                    ),
+                      Expanded(
+                        child: TabBarView(
+                          controller: _tabController,
+                          children: [
+                            SignIn(
+                                height: _height - Sizes.size48 * 6 - _stateBarHeight,
+                                tabController: _tabController
+                            ),
+                            const SignUp(),
+                          ],
+                        ),
+                      ),
+                    ],
                   ),
                 ),
-              ],
             ),
-          ),
+          ],
         ),
       ),
     );

@@ -19,7 +19,7 @@ class TuLingMusic extends StatelessWidget {
         primarySwatch: primaryColors,
         tabBarTheme: tabBarTheme,
       ),
-      // initialRoute: '/',
+      initialRoute: '/login',
       home: const BottomTabBar(),
       routes: {
         '/login': (context) => const LoginPage()
