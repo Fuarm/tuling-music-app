@@ -44,10 +44,10 @@ class MusicCard extends StatelessWidget {
                           TileMode.clamp,
                           TileMode.clamp,
                           Float64List.fromList([
-                            0.1, 0, 0, 0,
-                            0, 0.1, 0, 0,
+                            1, 0, 0, 0,
+                            0, 1, 0, 0,
                             0, 0, 1, 0,
-                            0, 0, 0, 1,
+                            0, 0, 0, snapshot.data.image.width / size,
                           ]),
                         );
                       },
@@ -59,7 +59,7 @@ class MusicCard extends StatelessWidget {
                           painter: _RingPainter(),
                         ),
                       )
-                  );
+                    );
               },
             ),
           ),
@@ -96,16 +96,14 @@ class _RingPainter extends CustomPainter {
   @override
   void paint(Canvas canvas, Size size) {
     final double radius = min(size.width, size.height) / 2;
-    Paint _paint = Paint()
-      ..style = PaintingStyle.stroke
-      ..strokeWidth = radius * 0.65
-      ..color = Colors.blue;
+
     canvas.drawArc(
         Rect.fromLTWH(radius * 0.35, radius * 0.35, radius * 1.3, radius * 1.3),
-        -pi / 2,
-        pi * 2,
-        false,
-        _paint
+        -pi / 2, pi * 2, false,
+        Paint()
+          ..style = PaintingStyle.stroke
+          ..strokeWidth = radius * 0.65
+          ..color = Colors.white
     );
   }
 

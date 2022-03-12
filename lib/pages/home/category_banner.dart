@@ -30,7 +30,7 @@ class CategoryBanner extends StatelessWidget {
             CategoryCard(
               title: 'Soul Pop',
               description: '4,129K Played',
-              image: 'https://img0.baidu.com/it/u=1893892304,95296813&fm=26&fmt=auto',
+              image: 'https://img2.baidu.com/it/u=1029123231,2131532878&fm=253&fmt=auto&app=138&f=JPEG?w=500&h=900',
               onPress: () {},
             )
           ],
