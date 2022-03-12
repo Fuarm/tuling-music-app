@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:tuling_music_app/pages/home/home_page.dart';
-import 'package:tuling_music_app/pages/login/login_page.dart';
+import 'package:tuling_music_app/pages/user/user_page.dart';
 
 class BottomTabBar extends StatefulWidget {
   const BottomTabBar({Key? key}) : super(key: key);
@@ -42,7 +42,7 @@ class _BottomTabBarState extends State<BottomTabBar> {
       body: PageView(
         children: const [
           HomePage(),
-          LoginPage()
+          UserPage()
         ],
         controller: _pageController,
         onPageChanged: _onPageChanged,

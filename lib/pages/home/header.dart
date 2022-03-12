@@ -12,7 +12,7 @@ class Header extends StatelessWidget {
       height: Sizes.size20 * 36,
       child: Stack(
         children: [
-          const NotificationArea(),
+          NotificationArea(),
           Transform.translate(
             offset: Offset(0, Sizes.size20 * 14),
             child: const CategoryBanner(),
