@@ -20,6 +20,12 @@ class MusicList extends StatelessWidget {
               cover: "https://img0.baidu.com/it/u=1893892304,95296813&fm=26&fmt=auto"
           ),
           MusicCard(
+              name: "挥着翅膀的女孩",
+              album: "Live",
+              artist: "李知恩（IU）",
+              cover: "https://img2.baidu.com/it/u=4162224702,2932016509&fm=253&fmt=auto&app=138&f=JPEG?w=500&h=500"
+          ),
+          MusicCard(
               name: "宝贝",
               album: "Live",
               artist: "李知恩（IU）",

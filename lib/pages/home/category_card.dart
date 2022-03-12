@@ -20,14 +20,20 @@ class CategoryCard extends StatelessWidget {
     return Container(
       width: width,
       height: height,
-      margin: EdgeInsets.only(right: Sizes.size20 * 2),
+      margin: EdgeInsets.only(right: Sizes.size20 * 2, bottom: 12),
       decoration: BoxDecoration(
         borderRadius: BorderRadius.only(
             topLeft: Radius.circular(Sizes.size28),
             topRight: Radius.circular(Sizes.size28),
             bottomLeft: Radius.circular(Sizes.size18),
             bottomRight: Radius.circular(Sizes.size18),
-        )
+        ),
+        boxShadow: const [BoxShadow(
+          color: Colors.black26,
+          offset: Offset(6, 6),
+          blurRadius: 6,
+          spreadRadius: 0,
+        )],
       ),
       clipBehavior: Clip.hardEdge,
       child: GestureDetector(

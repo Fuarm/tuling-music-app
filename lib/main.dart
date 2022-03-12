@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:tuling_music_app/pages/home/home_page.dart';
+import 'package:tuling_music_app/pages/bottom_tab_bar/bottom_tab_bar.dart';
 import 'package:tuling_music_app/pages/login/login_page.dart';
 import 'package:tuling_music_app/theme.dart';
 
@@ -19,9 +19,9 @@ class TuLingMusic extends StatelessWidget {
         primarySwatch: primaryColors,
         tabBarTheme: tabBarTheme,
       ),
-      initialRoute: '/',
+      // initialRoute: '/',
+      home: const BottomTabBar(),
       routes: {
-        '/': (context) => const HomePage(),
         '/login': (context) => const LoginPage()
       },
     );
